@@ -3,12 +3,10 @@ const express = require('express')
 const app = express()
 
 const hbs = require('hbs')
-const weather = require('../util/Weather')
-const path = require('path')
-const public = path.join(__dirname, '../public')
-app.use(express.static(public))
+const weather = require('./util/Weather')
+
 app.set('view engine', 'hbs')
-const viewsPath = path.join(__dirname, '../views')
+const viewsPath = path.join(__dirname, './views/')
 app.set('views',viewsPath)
 
 
@@ -39,7 +37,7 @@ app.get('/weather' , (req,res) => {
 
 // * it represent which is not present
 app.get('*' , (req, res) => {
-  res.render('erroe', {
+  res.render('error', {
     title:'404',
     errormessage: 'Page not found'
   })
