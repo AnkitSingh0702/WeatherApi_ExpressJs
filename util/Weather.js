@@ -1,7 +1,7 @@
 const request = require('postman-request')
 
  const weather = (address , Callback) => {
- const url = 'https://api.openweathermap.org/data/2.5/weather?q=' + encodeURIComponent(address) + '&units=metric&appid=Enter_Your_Own_ApiKey'
+ const url = 'https://api.openweathermap.org/data/2.5/weather?q=' + encodeURIComponent(address) + '&units=metric&appid=Enter_Your_Apikey'
  //HERE BODY IS REQUEST VARIABLE
  request({ url , json:true}, (error, {body}) => {
     if(error )

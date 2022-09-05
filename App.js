@@ -4,6 +4,7 @@ const app = express()
 
 const hbs = require('hbs')
 const weather = require('./util/Weather')
+const path = require('path')
 
 app.set('view engine', 'hbs')
 const viewsPath = path.join(__dirname, './views/')
