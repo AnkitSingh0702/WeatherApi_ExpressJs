@@ -1,2 +1,2 @@
 # WeatherApi_ExpressJs
-This api will return some important information related to weather, filtered from open weather api.
+This api will return some important information related to weather,from open weather api.
